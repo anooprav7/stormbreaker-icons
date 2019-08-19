@@ -15,12 +15,11 @@ function getComponentTemplate({ template }, opts, { imports, componentName, prop
 
 	return template.ast`${imports}
     import StyledSvg from '../StyledSvg';
-    function ${componentName}(${props}) { 
+    export function ${componentName}(${props}) { 
         return (
             ${jsx}
             )
     }
-    ${exports}
 `;
 }
 

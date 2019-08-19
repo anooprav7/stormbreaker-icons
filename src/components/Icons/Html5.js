@@ -1,7 +1,6 @@
 import React from "react";
 import StyledSvg from "../StyledSvg";
-
-function Html5(props) {
+export function Html5(props) {
   return (
     <StyledSvg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,5 +16,3 @@ function Html5(props) {
     </StyledSvg>
   );
 }
-
-export default Html5;

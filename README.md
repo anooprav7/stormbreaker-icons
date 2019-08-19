@@ -4,4 +4,5 @@ TODOs
 
 1. Commitizen
    add commitizen friendly badge from svgr readme
-2. Storybook
+2. Storybook or Docz
+3. CLI lib

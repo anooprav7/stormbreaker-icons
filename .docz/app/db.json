@@ -21,6 +21,39 @@
           "actualName": "Html5"
         }
       ]
+    },
+    {
+      "key": "src/components/Icons/JqueryLogo.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "JqueryLogo",
+          "methods": [],
+          "actualName": "JqueryLogo"
+        }
+      ]
+    },
+    {
+      "key": "src/components/Icons/Linux.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Linux",
+          "methods": [],
+          "actualName": "Linux"
+        }
+      ]
+    },
+    {
+      "key": "src/docs/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "IconList",
+          "methods": [],
+          "actualName": "IconList"
+        }
+      ]
     }
   ],
   "entries": [
