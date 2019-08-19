@@ -5,7 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"generate": "node scripts/generateIconComponents.js",
-		"docz:dev": "docz dev"
+		"docz.dev": "docz dev",
+		"docz.build": "docz build",
+		"docz.serve": "serve -s buildDocz"
 	},
 	"repository": {
 		"type": "git",

@@ -1,6 +1,6 @@
 import React from "react";
 import StyledSvg from "../StyledSvg";
-export function JqueryLogo(props) {
+export function Jquery(props) {
   return (
     <StyledSvg
       xmlns="http://www.w3.org/2000/svg"

@@ -5,13 +5,13 @@
 /.pnp
 .pnp.js
 /.docz
-.docz/
 
 # testing
 /coverage
 
 # production
 /build
+/buildDocz
 
 # misc
 .DS_Store

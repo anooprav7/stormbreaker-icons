@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const colorCss = css`
-	fill: ${props => props.color || '#0000ff'};
+	fill: ${props => props.color || '#000'};
 	stroke: ${props => props.color || '#00ff00'};
 	g {
 		fill: inherit;
@@ -27,7 +27,7 @@ const colorCss = css`
 	}
 `;
 
-const IconInner = ({ a11yTitle, color, size, theme, ...rest }) => <svg aria-label={a11yTitle} {...rest} />;
+const IconInner = ({ a11yTitle, color, size, ...rest }) => <svg aria-label={a11yTitle} {...rest} />;
 IconInner.displayName = 'Icon';
 
 const StyledSvg = styled(IconInner)`
