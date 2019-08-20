@@ -5,9 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"generate": "node scripts/generateIconComponents.js",
-		"docz.dev": "docz dev",
-		"docz.build": "docz build",
-		"docz.serve": "serve -s buildDocz"
+		"docs.dev": "docz dev",
+		"docs.build": "docz build",
+		"docs.serve": "serve -s buildDocz"
 	},
 	"repository": {
 		"type": "git",
@@ -19,8 +19,7 @@
 	],
 	"peerDependencies": {
 		"react": ">= 16.6.0",
-		"react-dom": ">= 16.6.0",
-		"styled-components": ">= 4.x"
+		"react-dom": ">= 16.6.0"
 	},
 	"author": "anooprav7@gmail.com",
 	"license": "MIT",
@@ -37,6 +36,7 @@
 		"docz": "1.2.0",
 		"docz-theme-default": "1.2.0",
 		"pascalcase": "1.0.0",
+		"prop-types": "^15.7.2",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
 		"rimraf": "2.6.3"
@@ -47,6 +47,6 @@
 		}
 	},
 	"dependencies": {
-		"styled-components": "^4.3.2"
+		"styled-components": "4.3.2"
 	}
 }

@@ -27,17 +27,14 @@ const colorCss = css`
 	}
 `;
 
-const IconInner = ({ a11yTitle, color, size, ...rest }) => <svg aria-label={a11yTitle} {...rest} />;
-IconInner.displayName = 'Icon';
-
-const StyledSvg = styled(IconInner)`
+const StyledSvg = styled(({ a11yTitle, color, size, ...rest }) => <svg aria-label={a11yTitle} {...rest} />)`
 	display: inline-block;
 	flex: 0 0 auto;
 	/* width: ${props => props.size || '24px'}; */
 	/* height: ${props => props.size || '24px'}; */
 	${({ color }) => color !== 'plain' && colorCss}
 `;
-
+StyledSvg.displayName = 'Icon';
 /*
 	a11yTitle: PropTypes.string,
 	color: PropTypes.string,
@@ -45,4 +42,4 @@ const StyledSvg = styled(IconInner)`
 	size: PropTypes.number
 */
 
-export default StyledSvg;
+export { StyledSvg };

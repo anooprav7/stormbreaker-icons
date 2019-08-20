@@ -1,5 +1,5 @@
 import React from "react";
-import StyledSvg from "../StyledSvg";
+import { StyledSvg } from "../StyledSvg";
 export function Ubuntu(props) {
   return (
     <StyledSvg

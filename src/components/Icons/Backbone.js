@@ -1,5 +1,5 @@
 import React from "react";
-import StyledSvg from "../StyledSvg";
+import { StyledSvg } from "../StyledSvg";
 export function Backbone(props) {
   return (
     <StyledSvg
