@@ -1,0 +1,43 @@
+---
+name: Icon PropTypes
+route: /icon
+edit: false
+---
+
+## Props
+
+import { Playground, Props } from 'docz';
+import WrapperForStyledSvg from './WrapperForStyledSvg';
+import { Linux } from '../../components/Icons';
+
+<Props of={WrapperForStyledSvg} />
+
+---
+
+## Override by props (DOM based)
+
+<div
+	style={{
+		fontSize: '18px',
+		backgroundColor: '#455A64',
+		padding: 12,
+		lineHeight: '28px',
+		color: '#FFF',
+		borderRadius: 5
+	}}
+>
+	stormbreaker-icons uses{' '}
+	<a href='https://www.styled-components.com/' target='_blank'>
+		styled components
+	</a>{' '}
+	for styling purposes and any additional props provided are spread on the &lt;svg /&gt; tag. So we can override the
+	defaults with any DOM valid tags.
+</div>
+
+---
+
+## Playground
+
+<Playground>
+	<Linux />
+</Playground>
