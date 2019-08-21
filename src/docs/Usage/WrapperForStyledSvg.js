@@ -7,7 +7,7 @@ const WrapperForStyledSvg = props => <StyledSvg {...props} />;
 // https://css-tricks.com/accessible-svgs/
 WrapperForStyledSvg.propTypes = {
 	/** Provides a human-readable aria-label on the svg tag. */
-	a11yTitle: PropTypes.string,
+	a11yLabel: PropTypes.string,
 
 	/**  A valid theme color value from design token colors. Eg. primary500, secondary400  */
 	themeColor: PropTypes.string,

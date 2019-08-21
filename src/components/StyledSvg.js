@@ -1,9 +1,18 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+const fillCss = css`
+    fill: ${props => props.htmlColor || (props.themeColor && props.theme.colors[props.themeColor]) || 'currentColor'}; 
+`;
+
+const strokeCss = css`
+    stroke: ${props => props.htmlColor || (props.themeColor && props.theme.colors[props.themeColor]) || 'currentColor'}; 
+`;
+
 const colorCss = css`
-	fill: ${props => props.htmlColor || (props.themeColor && props.theme.colors[props.themeColor]) || 'currentColor'};
-	stroke: ${props => props.htmlColor || (props.themeColor && props.theme.colors[props.themeColor]) || 'currentColor'};
+    ${props => props.enableFill && fillCss }
+    ${props => !props.removeStroke && strokeCss }
+	
 	g {
 		fill: inherit;
 		stroke: inherit;
@@ -27,8 +36,8 @@ const colorCss = css`
 	}
 `;
 
-const StyledSvg = styled(({ a11yTitle, themeColor, htmlColor, useDefaultColors, size, ...rest }) => (
-	<svg role='img' aria-label={a11yTitle} {...rest} />
+const StyledSvg = styled(({ a11yLabel, themeColor, htmlColor, useDefaultColors, size,removeFill,removeStroke, ...rest }) => (
+	<svg role='img' aria-label={a11yLabel} {...rest} />
 ))`
 	display: inline-block;
 	width: ${props => (props.size && `${props.size}px`) || '24px'};
