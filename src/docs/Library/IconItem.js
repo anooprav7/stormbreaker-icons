@@ -27,8 +27,9 @@ function IconItem(props) {
 	return (
 		<Container
 			onClick={() => {
-				navigator.clipboard.writeText(label);
-				window.alert(`Copied '${label}' to Clipboard`);
+				navigator.clipboard.writeText(label).then( ()=>{
+                    window.alert(`Copied '${label}' to Clipboard`);
+                })
 			}}
 		>
 			<Wrapper>
