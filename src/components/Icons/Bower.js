@@ -4,8 +4,6 @@ export function Bower(props) {
   return (
     <StyledSvg
       xmlns="http://www.w3.org/2000/svg"
-      width={32}
-      height={32}
       viewBox="0 0 32 32"
       {...props}
     >

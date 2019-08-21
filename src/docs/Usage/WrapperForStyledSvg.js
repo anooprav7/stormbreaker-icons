@@ -7,17 +7,23 @@ const WrapperForStyledSvg = props => <StyledSvg {...props} />;
 // https://css-tricks.com/accessible-svgs/
 WrapperForStyledSvg.propTypes = {
 	/** Provides a human-readable title for the element that contains it. If not provided, will be the Icon name. [W3Org](https://www.w3.org/TR/SVG-access/#Equivalent) */
-	a11yTitle: PropTypes.string.isRequired,
+	a11yTitle: PropTypes.string,
 
-	/**  A valid theme color value. Eg. primary500, secondary400  */
+	/**  A valid theme color value from design token colors. Eg. primary500, secondary400  */
 	themeColor: PropTypes.string,
 
 	/** Applies a color attribute to the SVG element. Takes precedence over themeColor */
 	htmlColor: PropTypes.string,
 
-	/** Size of the Icon. Same scale as font scale in stormbreaker theme token   */
-	size: PropTypes.string
+	/** Size of the Icon (height and width) in px   */
+	size: PropTypes.number,
+
+	/** Use the default colors provided in the svg. Used mostly in Icons with multi-colored paths  */
+	useDefaultColors: PropTypes.bool
 };
-WrapperForStyledSvg.defaultProps = {};
+WrapperForStyledSvg.defaultProps = {
+	size: 32,
+	useDefaultColors: false
+};
 
 export default WrapperForStyledSvg;

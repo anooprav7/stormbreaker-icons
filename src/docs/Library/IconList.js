@@ -25,25 +25,26 @@ const Input = styled.input`
 	transition: border-color 0.25s ease 0s, box-shadow 0.25s ease 0s;
 	font-family: sans-serif;
 	&:focus {
-		box-shadow: rgb(10, 132, 174) 0px 0px 0px 1px;
-		border-color: rgb(10, 132, 174);
+		box-shadow: #0b5fff 0px 0px 0px 1px;
+		border-color: #0b5fff;
 		outline: none;
 	}
 `;
 
+const allIconNames = Object.keys(Icons);
+
 function IconList(props) {
 	const [query, setQuery] = useState('');
-	const allIconNames = Object.keys(Icons);
-
+	const filteredIcons = allIconNames.reduce((IconsToShow, Icon) => {
+		if (Icon.toLowerCase().startsWith(query.toLowerCase()))
+			return (IconsToShow = [...IconsToShow, <IconItem IconComponent={Icons[Icon]} label={Icon} />]);
+		return IconsToShow;
+	}, []);
 	return (
 		<Container>
 			{' '}
 			<Input placeholder='Search Icon Library' onChange={e => setQuery(e.target.value)} />
-			{allIconNames.reduce((IconsToShow, Icon) => {
-				if (Icon.toLowerCase().startsWith(query.toLowerCase()))
-					return (IconsToShow = [...IconsToShow, <IconItem IconComponent={Icons[Icon]} label={Icon} />]);
-				return IconsToShow;
-			}, [])}
+			{filteredIcons.length > 0 ? filteredIcons : <div>No Icons Found</div>}
 		</Container>
 	);
 }

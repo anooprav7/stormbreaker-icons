@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 
 	width: 50%;
 	&:hover {
-		color: #4caf50;
+		color: #2196f3;
 		cursor: pointer;
 	}
 `;
@@ -32,7 +32,7 @@ function IconItem(props) {
 			}}
 		>
 			<Wrapper>
-				<IconComponent color='currentColor' size={45} />
+				<IconComponent size={45} />
 				<span>{label}</span>
 			</Wrapper>
 		</Container>
