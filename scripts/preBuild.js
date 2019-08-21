@@ -6,7 +6,11 @@ const BUILD_OUTPUT_FOLDER = './build';
 rimraf.sync(BUILD_OUTPUT_FOLDER);
 fs.mkdirSync(BUILD_OUTPUT_FOLDER);
 
-fs.copyFile('package.json', BUILD_OUTPUT_FOLDER + '/package.json', err => {
-	if (err) throw err;
-	console.log('package.json copied');
+const filesToCopy = ['package.json', 'README.md'];
+
+filesToCopy.forEach(file => {
+	fs.copyFile(file, BUILD_OUTPUT_FOLDER + '/' + file, err => {
+		if (err) throw err;
+		console.log(`${file} copied`);
+	});
 });

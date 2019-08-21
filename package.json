@@ -3,12 +3,15 @@
 	"version": "0.1.0",
 	"description": "Stormbreaker Icons",
 	"main": "index.js",
+	"module": "es6/index.js",
+	"jsnext:main": "es6/index.js",
+	"sideEffects": false,
 	"scripts": {
 		"generate": "node scripts/generateIconComponents.js",
 		"build.preBuild": "node scripts/preBuild.js",
 		"build.babel": "babel ./src/components/ --ignore '__tests__' --out-dir ./build --copy-files",
 		"build.babelEs6": "cross-env BABEL_ENV=es6 babel ./src/components/ --ignore '__tests__' --out-dir ./build/es6 --copy-files",
-		"build": "yarn preBuild",
+		"build": "yarn generate && yarn build.preBuild && yarn build.babel && yarn build.babelEs6",
 		"docs.dev": "docz dev",
 		"docs.build": "docz build",
 		"docs.serve": "serve -s buildDocz"
@@ -22,8 +25,9 @@
 		"react-icons"
 	],
 	"peerDependencies": {
-		"react": ">= 16.6.0",
-		"react-dom": ">= 16.6.0"
+		"react": ">= 16.8.0",
+		"react-dom": ">= 16.8.0",
+		"styled-components": ">= 4.x"
 	},
 	"author": "anooprav7@gmail.com",
 	"license": "MIT",
@@ -54,6 +58,6 @@
 		}
 	},
 	"dependencies": {
-		"styled-components": "4.3.2"
+		"styled-components": "^4.3.2"
 	}
 }
