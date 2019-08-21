@@ -5,6 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"generate": "node scripts/generateIconComponents.js",
+		"build.preBuild": "node scripts/preBuild.js",
+		"build.babel": "babel ./src/components/ --ignore '__tests__' --out-dir ./build --copy-files",
+		"build.babelEs6": "cross-env BABEL_ENV=es6 babel ./src/components/ --ignore '__tests__' --out-dir ./build/es6 --copy-files",
+		"build": "yarn preBuild",
 		"docs.dev": "docz dev",
 		"docs.build": "docz build",
 		"docs.serve": "serve -s buildDocz"
@@ -28,10 +32,13 @@
 	},
 	"homepage": "https://github.com/anooprav7/stormbreaker-icons#readme",
 	"devDependencies": {
+		"@babel/preset-react": "^7.0.0",
 		"@svgr/core": "4.3.2",
 		"@svgr/plugin-jsx": "4.3.2",
 		"@svgr/plugin-prettier": "4.3.2",
 		"@svgr/plugin-svgo": "4.3.1",
+		"babel-plugin-styled-components": "^1.10.6",
+		"cross-env": "^5.2.0",
 		"cz-conventional-changelog": "3.0.2",
 		"docz": "1.2.0",
 		"docz-theme-default": "1.2.0",
