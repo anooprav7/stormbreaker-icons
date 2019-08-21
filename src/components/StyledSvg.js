@@ -27,9 +27,10 @@ const colorCss = css`
 	}
 `;
 
-const StyledSvg = styled(({ a11yTitle, color, size, ...rest }) => <svg aria-label={a11yTitle} {...rest} />)`
+const StyledSvg = styled(({ a11yTitle, themeColor, htmlColor, useDefaultColors, size, ...rest }) => (
+	<svg role='img' aria-label={a11yTitle} {...rest} />
+))`
 	display: inline-block;
-	flex: 0 0 auto;
 	width: ${props => (props.size && `${props.size}px`) || '24px'};
 	height: ${props => (props.size && `${props.size}px`) || '24px'};
 	${({ useDefaultColors }) => !useDefaultColors && colorCss}
