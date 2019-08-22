@@ -1,7 +1,5 @@
 # Stormbreaker Icons
 
-# Add the official Readme here also
-
 [Documentation HERE](https://stormbreaker-icons.netlify.com/)
 
 ## Features
